@@ -26,10 +26,7 @@ class KayitViewController: UIViewController {
         super.viewDidLoad()
         
         kayitButon.layer.cornerRadius = kayitButon.frame.size.height / 5
-
-      
     }
-    
     
     @IBAction func KayitIslemi(_ sender: UIStoryboardSegue) {
         
@@ -84,9 +81,7 @@ class KayitViewController: UIViewController {
             "email" : k.email,
             "kullaniciTuru" : k.kullaniciTuru,
             "hizmet" : k.hizmet
-        ]
-        
-        
+        ] 
         var ref = Database.database().reference()
         ref.child("Kullanici").child(Auth.auth().currentUser!.uid).setValue(d)
 
